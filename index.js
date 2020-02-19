@@ -1,8 +1,8 @@
-var noOfDrums = document.querySelector(".drum").length;
+var noOfDrums = document.querySelectorAll(".drum").length;
 
 for(var i=0;i<noOfDrums;i++)
 {
-  document.querySelector(".drum")[i].addEventListener("click", function(){
+    document.querySelectorAll(".drum")[i].addEventListener("click", function(){
     var buttonName = this.innerHTML;
     makeSound(buttonName);
     makeDark(buttonName);
@@ -58,5 +58,4 @@ function makeDark(buttonOrKey)
     setTimeout(function(){
       document.querySelector("."+buttonOrKey).classList.remove("pressed");//remove shadow after .1 sec
     }, 100);
-    return;
 }
